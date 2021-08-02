@@ -75,6 +75,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
+	<script type=”text/javascript”>
+var bg_sound=document.createElement_x(“bgsound”);//建立背景音樂
+bg_sound.id=”i_bg”//設定id屬性
+document.body.appendChild(bg_sound);//body中新增背景音樂
+//bg_sound.src=”tmp3.mp3″;
+i_bg.src=”tmp3.mp3″;//設定一個背景音樂檔案
+//應該也可以用write寫出來，可以試下效果。
+function bg_stop(){
+  i_bg.src=””;
+}
+function bg_start(){
+  i_bg.src=”tmp3.mp3″;
+}
+</script>
 <div class="parallax">
 	<!-- 1 -->
 	<div id="frontpage" class="parallax_group">
@@ -432,7 +446,7 @@
 
   
 
-  
+  <span ><a onclick=”javascript:bg_stop();” href=”javascript:void(0);”>背景音樂停止</a></span>  <span ><a onclick=”javascript:bg_start();” href=”javascript:void(0);”>背景音樂開始</a></span>
 
 </body>
 </html>
